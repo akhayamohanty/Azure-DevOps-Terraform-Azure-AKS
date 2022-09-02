@@ -146,7 +146,7 @@ Example: https://github.com/stacksimplify/azure-devops-aks-kubernetes-terraform-
 - Click on **SAVE**
 
 
-## Step-08: VERY IMPORTANT FIX: Provide Permission to create Azure AD Groups
+## Step-08: VERY IMPORTANT FIX: Provide Permission to create Azure AD Groups(Chech for AD permission)
 - Provide permission for Service connection created in previous step to create Azure AD Groups
 - Go to -> Azure DevOps -> Select Organization -> Select project **terraform-azure-aks**
 - Go to **Project Settings** -> Pipelines -> Service Connections 
