@@ -19,3 +19,10 @@ stages:
         displayName: Terraform Install
         inputs:
           terraformVersion: 'latest'
+- task: TerraformTaskV3@3
+  inputs:
+    provider: 'azurerm'
+    command: 'init'
+    backendAzureRmResourceGroupName: 'rg-Mcmsdevops-kcl-eastus-001'
+    backendAzureRmStorageAccountName: 'terraformstoragdevops'
+    backendAzureRmContainerName: 'tfstatefiles'
