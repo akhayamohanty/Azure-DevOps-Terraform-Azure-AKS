@@ -24,6 +24,7 @@ stages:
       inputs:
         provider: 'azurerm'
         command: 'init'
+        backendServiceArm: 'terraform-aks-azurerm-svc-con'
         backendAzureRmResourceGroupName: 'rg-Mcmsdevops-kcl-eastus-001'
         backendAzureRmStorageAccountName: 'terraformstoragdevops'
         backendAzureRmContainerName: 'tfstatefiles'
