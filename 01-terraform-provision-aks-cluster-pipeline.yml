@@ -26,3 +26,21 @@ stages:
           targetPath: '$(System.DefaultWorkingDirectory)/Git-Repo-Files/terraform-manifests'
           artifact: 'terraform-manifests-out'
           publishLocation: 'pipeline'
+      - task: TerraformCLI@0
+        displayName: Terraform Init
+        inputs:
+          command: 'init'
+          workingDirectory: '$(System.DefaultWorkingDirectory)/Git-Repo-Files/terraform-manifests'
+          backendType: 'azurerm'
+          backendServiceArm: 'terraform-aks-azurerm-svc-con'
+          backendAzureRmResourceGroupName: 'rg-Mcmsdevops-kcl-eastus-001'
+          backendAzureRmStorageAccountName: 'terraformstoragdevops'
+          backendAzureRmContainerName: 'tfstatefiles'
+          backendAzureRmKey: 'aks-base.tfstate'
+          allowTelemetryCollection: false
+      - task: TerraformCLI@0
+        displayName: Terraform Validate
+        inputs:
+          command: 'validate'
+          workingDirectory: '$(System.DefaultWorkingDirectory)/Git-Repo-Files/terraform-manifests'
+          allowTelemetryCollection: false
