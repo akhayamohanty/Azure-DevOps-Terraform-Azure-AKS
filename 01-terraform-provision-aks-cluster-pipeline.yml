@@ -19,3 +19,10 @@ stages:
         displayName: Terraform Install
         inputs:
           terraformVersion: 'latest'
+      
+      - task: PublishPipelineArtifact@1
+        displayName: Publish Artifacts
+        inputs:
+          targetPath: '$(System.DefaultWorkingDirectory)/terraform-manifests'
+          artifact: 'terraform-manifests-out'
+          publishLocation: 'pipeline'
