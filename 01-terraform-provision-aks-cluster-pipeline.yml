@@ -15,10 +15,6 @@ stages:
     - job: TerraformValidateJob
       continueOnError: false
       steps:
-      - task: TerraformInstaller@0
-        displayName: Terraform Install
-        inputs:
-          terraformVersion: 'latest'
       - task: PublishPipelineArtifact@1
         displayName: Publish Artifacts
         inputs:
