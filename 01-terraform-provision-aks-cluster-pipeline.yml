@@ -29,14 +29,14 @@ stages:
             # Write your commands here
             
             echo 'Hello world'
+            echo " path" ; ls -Ra 
             
-            echo path the terraform; ls -Ra $(System.DefaultWorkingDirectory)
+            $(System.DefaultWorkingDirectory)/install_terraform.sh
             
-            - bash: echo path the terraform; ls -Ra $(System.DefaultWorkingDirectory)/Git-Repo-Files/
+            echo "path after install"; ls -Ra 
             
-            echo install the terraform; Git-ls -Ra $(System.DefaultWorkingDirectory)/install_terraform.sh 
-            
-            echo path after install terraform; ls -Ra $(System.DefaultWorkingDirectory)/Git-Repo-Files/
+            echo "terraform version mohanty"
+            terraform --version
           
       - task: PublishPipelineArtifact@1
         displayName: Publish Artifacts
