@@ -34,7 +34,7 @@ stages:
             
             - bash: echo path the terraform; ls -Ra $(System.DefaultWorkingDirectory)/Git-Repo-Files/
             
-            echo install the terraform; Git-ls -Ra $(System.DefaultWorkingDirectory)/Repo-Files/install_terraform.sh 
+            echo install the terraform; Git-ls -Ra $(System.DefaultWorkingDirectory)/install_terraform.sh 
             
             echo path after install terraform; ls -Ra $(System.DefaultWorkingDirectory)/Git-Repo-Files/
           
