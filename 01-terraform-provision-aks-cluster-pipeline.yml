@@ -22,10 +22,10 @@ stages:
     - job: TerraformValidateJob
       continueOnError: false
       steps:
-      - task: TerraformInstaller@0
-        displayName: Terraform Install
+      - task: Bash@3
         inputs:
-          terraformVersion: 'latest'
+          filePath: '$(System.DefaultWorkingDirectory)/Git-Repo-Files/install_terraform.sh'
+          
       - task: PublishPipelineArtifact@1
         displayName: Publish Artifacts
         inputs:
