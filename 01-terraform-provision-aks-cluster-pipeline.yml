@@ -24,7 +24,19 @@ stages:
       steps:
       - task: Bash@3
         inputs:
-          filePath: '$(System.DefaultWorkingDirectory)/Git-Repo-Files/install_terraform.sh'
+          targetType: 'inline'
+          script: |
+            # Write your commands here
+            
+            echo 'Hello world'
+            
+            echo path the terraform; ls -Ra $(System.DefaultWorkingDirectory)
+            
+            - bash: echo path the terraform; ls -Ra $(System.DefaultWorkingDirectory)/Git-Repo-Files/
+            
+            echo install the terraform; Git-ls -Ra $(System.DefaultWorkingDirectory)/Repo-Files/install_terraform.sh 
+            
+            echo path after install terraform; ls -Ra $(System.DefaultWorkingDirectory)/Git-Repo-Files/
           
       - task: PublishPipelineArtifact@1
         displayName: Publish Artifacts
