@@ -7,21 +7,21 @@
 variable "location" {
   type = string
   description = "Azure Region where all these resources will be provisioned"
-  default = "Central US"
+  default = "East US"
 }
 
 # Azure Resource Group Name
 variable "resource_group_name" {
   type = string
   description = "This variable defines the Resource Group"
-  default = "terraform-aks"
+  default = "rg-Mcmsdevops-kcl-eastus-001"
 }
 
 # Azure AKS Environment Name
 variable "environment" {
   type = string  
   description = "This variable defines the Environment"  
-  #default = "dev2"
+  default = "dev2"
 }
 
 
